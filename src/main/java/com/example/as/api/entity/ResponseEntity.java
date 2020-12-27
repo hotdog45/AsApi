@@ -1,10 +1,12 @@
 package com.example.as.api.entity;
 
 import com.example.as.api.uitl.ResponseCode;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResponseEntity {
     private int code;
 

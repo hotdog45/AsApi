@@ -20,8 +20,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
-    public static final String VERSION  = "1.0";
-    public static final String AUTHOR  = "顺风";
+    private static final String VERSION  = "1.0";
+    private static final String AUTHOR  = "顺风";
     public Docket createRestApi(){
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
@@ -39,7 +39,7 @@ public class SwaggerConfig {
                 .title("API接口文档")
                 .description("111111")
                 .version(VERSION)
-                .contact(new Contact(AUTHOR,"","mac2020@126.com"))
+                .contact(new Contact(AUTHOR,"http://blog.lishunfneg.top","mac2020@126.com"))
                 .build();
     }
 

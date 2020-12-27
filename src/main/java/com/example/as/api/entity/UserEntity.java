@@ -1,5 +1,8 @@
 package com.example.as.api.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserEntity {
     /** 用户id */
     public String uid ;
