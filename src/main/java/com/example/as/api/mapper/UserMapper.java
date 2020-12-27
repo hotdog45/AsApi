@@ -1,6 +1,9 @@
 package com.example.as.api.mapper;
 
+import com.example.as.api.entity.UserEntity;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 
 /**
@@ -9,5 +12,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface UserMapper {
-    void addUser(String userName,String password,String imoocId,String orderId,String createTime);
+    void addUser(String userName, String password, String imoocId, String orderId, String createTime);
+
+    List<UserEntity> findUser(String userName);
 }
