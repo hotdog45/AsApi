@@ -8,9 +8,9 @@ spring:
 #    url: jdbc:mysql://localhost:3306/mytest?characterEncoding=utf8&useSSL=true
 #    username: root
 #    password: 123456
-    url: jdbc:mysql://localhost:3306/mytest?characterEncoding=utf8&useSSL=true
+    url: jdbc:mysql://81.69.15.230:3306/mytest?characterEncoding=utf8&useSSL=true
     username: root
-    password: 2106862.
+    password: root
   # Redis数据源
   redis:
     host: localhost
