@@ -597,11 +597,21 @@
     "dbs": [
       {
         "name": "",
-        "defaultDB": true,
+        "defaultDB": false,
         "properties": {
           "driver_class_name": "com.mysql.jdbc.Driver",
           "url": "jdbc:mysql://localhost:3306/mytest?characterEncoding=UTF-8&useSSL=false&useUnicode=true&serverTimezone=UTC",
           "password": "123456",
+          "username": "root"
+        }
+      },
+      {
+        "name": "",
+        "defaultDB": true,
+        "properties": {
+          "driver_class_name": "com.mysql.jdbc.Driver",
+          "url": "jdbc:mysql://81.69.15.230:3306/mytest?characterEncoding=UTF-8&useSSL=false&useUnicode=true&serverTimezone=UTC",
+          "password": "2106862.",
           "username": "root"
         }
       }
