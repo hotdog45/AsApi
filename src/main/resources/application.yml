@@ -13,7 +13,8 @@ spring:
     password: root
   # Redis数据源
   redis:
-    host: localhost
+#    host: localhost
+    host: 81.69.15.230
     port: 6379
     timeout: 6000
     #    password: xxx
