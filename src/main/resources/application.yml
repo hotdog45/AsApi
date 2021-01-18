@@ -6,8 +6,8 @@ spring:
   # 配置数据源
   datasource:
     url: jdbc:mysql://localhost:3306/mytest?characterEncoding=utf8&useSSL=true
-    username: root
-    password: 123456
+    username: lsf
+    password: lsf123
   # Redis数据源
   redis:
     host: localhost
