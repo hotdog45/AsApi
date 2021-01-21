@@ -19,4 +19,8 @@ public class UserService {
     public List<UserEntity> findUser(String userName){
        return userMapper.findUser(userName);
     }
+
+    public List<UserEntity> findAllUser(){
+        return userMapper.findAllUser();
+    }
 }
