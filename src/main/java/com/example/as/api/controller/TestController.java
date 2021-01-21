@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public Object hello() {
-        return "hello spring~!!!!!!!!!!!!!";
+        return "hello spring~!!持续集成OK~";
     }
 }
