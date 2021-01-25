@@ -2,6 +2,7 @@ package com.example.as.api.uitl;
 
 public enum ResponseCode {
     RC_SUCCESS(0,"SUCCESS"),
+    RC_ERROR(1001,"系统错误"),
     RC_ACCOUNT_INVALID(5001,"账号不存在"),
     RC_PWD_INVALID(5002,"密码错误"),
     RC_NEED_LOGIN(5003,"请先登录"),
