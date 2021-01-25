@@ -15,4 +15,6 @@ public interface UserMapper {
     void addUser(String userName, String password, String imoocId, String orderId, String createTime);
 
     List<UserEntity> findUser(String userName);
+
+    List<UserEntity> findAllUser();
 }

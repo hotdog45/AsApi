@@ -81,4 +81,15 @@ public class UserController {
 
         return ResponseEntity.successMessage("退出成功~");
     }
+
+    @ApiOperation(value = "用户列表")
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    public ResponseEntity list( HttpServletRequest request) {
+        List<UserEntity> list = userService.findAllUser();
+        if (list == null || list.isEmpty()) {
+            return ResponseEntity.of(ResponseCode.RC_ACCOUNT_INVALID);
+        }
+        return ResponseEntity.success(list).setMessage("成功!");
+
+    }
 }

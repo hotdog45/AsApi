@@ -32,4 +32,10 @@
             user_name = #{userName}
 
     </select>
+    <select id="findAllUser" resultType="com.example.as.api.entity.UserEntity">
+        SELECT
+            *
+        FROM
+            t_user
+    </select>
 </mapper>
