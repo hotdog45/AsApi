@@ -23,8 +23,8 @@ public class UserService {
     public List<UserEntity> findAllUser(){
         return userMapper.findAllUser();
     }
-    public void updateUser(String id,String forbid){
-        userMapper.updateUser(id, forbid);
+    public void updateUser(String uid,String forbid){
+        userMapper.updateUser(uid, forbid);
 
     }
 

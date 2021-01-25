@@ -9,15 +9,13 @@ import com.example.as.api.uitl.ResponseCode;
 import com.example.as.api.uitl.UserRedisUtil;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -27,6 +25,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping(value = "/user")
+@Api(value = "Account")
 public class UserController {
     @Autowired
     private UserService userService;
@@ -98,7 +97,7 @@ public class UserController {
 
     @ApiOperation(value = "用户管理")
     @RequestMapping(value = "/{uid}", method = RequestMethod.PUT)
-    public ResponseEntity updateUser(@ApiParam("用户id") String uid
+    public ResponseEntity updateUser(@ApiParam("用户id") @PathVariable String uid
             ,@RequestParam(value = "forbid") @ApiParam("是否禁止") String forbid
             ,HttpServletRequest request) {
         userService.updateUser(uid,forbid);

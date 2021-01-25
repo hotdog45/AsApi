@@ -1,8 +1,10 @@
 package com.example.as.api.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties(value = {"pwd"})
 public class UserEntity {
     /** 用户id */
     public String uid ;

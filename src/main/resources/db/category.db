@@ -1,0 +1,6 @@
+CREATE TABLE t_goods_category(
+    category_id INT NOT NULL   COMMENT '商品类别ID' ,
+    category_name VARCHAR(128)    COMMENT '类别名' ,
+    create_time DATETIME    COMMENT '创建时间' ,
+    PRIMARY KEY (category_id)
+) COMMENT = '商品类别';

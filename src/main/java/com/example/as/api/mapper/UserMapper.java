@@ -17,6 +17,6 @@ public interface UserMapper {
     List<UserEntity> findUser(String userName);
 
     List<UserEntity> findAllUser();
-    void updateUser(String id,String forbid);
+    void updateUser(String uid,String forbid);
 
 }

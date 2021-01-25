@@ -113,6 +113,88 @@
             }
           ],
           "chnname": "用户信息表"
+        },
+        {
+          "title": "t_goods_category",
+          "fields": [
+            {
+              "name": "category_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "商品类别ID",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "category_name",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "类别名"
+            },
+            {
+              "name": "create_time",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            }
+          ],
+          "indexs": [
+            {
+              "name": "index_name",
+              "isUnique": true,
+              "fields": [
+                "category_name"
+              ]
+            }
+          ],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "商品类别",
+          "remark": ""
         }
       ],
       "graphCanvas": {
