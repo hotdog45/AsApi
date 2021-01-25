@@ -23,4 +23,9 @@ public class UserService {
     public List<UserEntity> findAllUser(){
         return userMapper.findAllUser();
     }
+    public void updateUser(String id,String forbid){
+        userMapper.updateUser(id, forbid);
+
+    }
+
 }

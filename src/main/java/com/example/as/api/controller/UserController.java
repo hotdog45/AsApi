@@ -95,4 +95,14 @@ public class UserController {
         return ResponseEntity.success(DataUtil.getPageData(list));
 
     }
+
+    @ApiOperation(value = "用户管理")
+    @RequestMapping(value = "/{uid}", method = RequestMethod.PUT)
+    public ResponseEntity updateUser(@ApiParam("用户id") String uid
+            ,@RequestParam(value = "forbid") @ApiParam("是否禁止") String forbid
+            ,HttpServletRequest request) {
+        userService.updateUser(uid,forbid);
+        return ResponseEntity.successMessage("修改成功!");
+
+    }
 }
