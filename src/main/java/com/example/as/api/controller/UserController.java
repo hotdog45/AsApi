@@ -4,8 +4,11 @@ import com.example.as.api.config.NeedLogin;
 import com.example.as.api.entity.ResponseEntity;
 import com.example.as.api.entity.UserEntity;
 import com.example.as.api.service.UserService;
+import com.example.as.api.uitl.DataUtil;
 import com.example.as.api.uitl.ResponseCode;
 import com.example.as.api.uitl.UserRedisUtil;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -84,12 +87,12 @@ public class UserController {
 
     @ApiOperation(value = "用户列表")
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public ResponseEntity list( HttpServletRequest request) {
+    public ResponseEntity list(@RequestParam(value = "index") @ApiParam("第几页") int index
+            ,@RequestParam(value = "pageSize") @ApiParam("每页数量") int pageSize
+            ,HttpServletRequest request) {
+        PageHelper.startPage(index,pageSize);
         List<UserEntity> list = userService.findAllUser();
-        if (list == null || list.isEmpty()) {
-            return ResponseEntity.of(ResponseCode.RC_ACCOUNT_INVALID);
-        }
-        return ResponseEntity.success(list).setMessage("成功!");
+        return ResponseEntity.success(DataUtil.getPageData(list));
 
     }
 }
