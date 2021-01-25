@@ -1,0 +1,10 @@
+CREATE TABLE t_user(
+    uid INT NOT NULL AUTO_INCREMENT  COMMENT '用户id' ,
+    imooc_id INT NOT NULL   COMMENT 'imooc用户id' ,
+    order_id INT NOT NULL   COMMENT '订单id' ,
+    user_name VARCHAR(128) NOT NULL   COMMENT '用户名' ,
+    pwd VARCHAR(128) NOT NULL   COMMENT '密码' ,
+    create_time DATETIME    COMMENT '创建时间' ,
+    forbid VARCHAR(1)    COMMENT '是否禁用' ,
+    PRIMARY KEY (uid)
+) COMMENT = '用户信息表 ';
