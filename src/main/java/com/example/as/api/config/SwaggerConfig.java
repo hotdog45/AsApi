@@ -33,6 +33,8 @@ public class SwaggerConfig {
                 .ignoredParameterTypes(ApiIgnore.class)
                 .enableUrlTemplating(false)
                 .tags(new Tag("Category","商品类别"))
+                .tags(new Tag("City","省市区"))
+
                 .tags(new Tag("Account","账号模块"));
     }
     private ApiInfo apiInfo(){
