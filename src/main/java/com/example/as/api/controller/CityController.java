@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/city")
-@Api(tags = "City")
+@Api(value = "城市")
 public class CityController {
 
     @Autowired
